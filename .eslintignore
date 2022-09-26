@@ -1,0 +1,6 @@
+/.next/
+/out
+/node_modules
+next.config.js
+*.tsbuildinfo
+/sanity/

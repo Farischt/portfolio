@@ -1,0 +1,8 @@
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    NEXT_PUBLIC_BASE_URL: string
+    NEXT_PUBLIC_SANITY_DATASET: string
+    NEXT_PUBLIC_SANITY_PROJECT_ID: string
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: string
+  }
+}
