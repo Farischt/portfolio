@@ -26,13 +26,13 @@ const Contact = ({ pageInfo }: Props) => {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
+      <div className="flex flex-col space-y-6">
+        <h4 className="text-center text-base font-semibold sm:text-3xl md:text-4xl">
           I have got just what you need.
           <span className="underline decoration-[#F7AB0A]/50"> Lets Talk!</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-10 text-sm">
           <div className="flex items-center justify-center space-x-5">
             <PhoneIcon className="h-7 w-7 animate-pulse text-[#F7AB0A]" />
             <p>{pageInfo?.phoneNumber}</p>
@@ -52,7 +52,7 @@ const Contact = ({ pageInfo }: Props) => {
           //@ts-ignore
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col space-y-2 space-x-0 md:flex-row md:space-x-2 md:space-y-0">
             <input
               {...register("name")}
               placeholder="Name"
