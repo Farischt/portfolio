@@ -1,10 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import {
-  ServerStackIcon,
-  CircleStackIcon,
-  GlobeAltIcon,
-} from "@heroicons/react/24/solid"
+import { CircleStackIcon, GlobeAltIcon } from "@heroicons/react/24/solid"
 
 const Services = () => {
   return (

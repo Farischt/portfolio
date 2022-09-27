@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { Project } from "../types"
@@ -33,7 +34,7 @@ const Projects = ({ projects }: Props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <motion.img
+              <motion.div
                 initial={{
                   y: -100,
                   opacity: 0,
@@ -41,10 +42,16 @@ const Projects = ({ projects }: Props) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
-                src={urlFor(project.image).url()}
-                alt=""
-                className="h-48 md:h-64"
-              />
+                className="relative h-64 w-96 md:h-64"
+              >
+                <Image
+                  src={urlFor(project.image).url()}
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition=""
+                />
+              </motion.div>
             </a>
 
             <div className="max-w-6xl space-y-5 px-0 md:space-y-10 md:px-10">
@@ -56,12 +63,19 @@ const Projects = ({ projects }: Props) => {
               </h4>
               <div className="my-2 flex items-center justify-center space-x-2">
                 {project.technologies.map((project) => (
-                  <img
+                  <div
                     key={project._id}
-                    className="h-5 w-5 rounded-full object-cover object-center"
-                    src={urlFor(project?.image).url()}
-                    alt=""
-                  />
+                    className="relative h-7 w-7 rounded-full"
+                  >
+                    <Image
+                      className="rounded-full"
+                      src={urlFor(project?.image).url()}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                      alt=""
+                    />
+                  </div>
                 ))}
               </div>
               <p className="text-justify text-xs md:text-base lg:text-lg">

@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Experience } from "../types"
 import { urlFor } from "../sanity"
+import Image from "next/image"
 
 type Props = {
   experience: Experience
@@ -10,7 +11,7 @@ type Props = {
 const ExperienceCard = ({ experience }: Props) => {
   return (
     <article className="flex h-[600px] w-[300px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900]">
-      <motion.img
+      <motion.div
         initial={{
           y: -100,
           opacity: 0,
@@ -23,21 +24,35 @@ const ExperienceCard = ({ experience }: Props) => {
         transition={{
           duration: 1.2,
         }}
-        src={urlFor(experience?.companyImage).url()}
-        alt="Experience's image"
-        className="h-32 w-32 rounded-full object-cover object-center xl:h-[200px] xl:w-[200px]"
-      />
+        className="relative h-32 w-32 flex-shrink-0 rounded-full xl:h-[200px] xl:w-[200px]"
+      >
+        <Image
+          src={urlFor(experience?.companyImage).url()}
+          alt="Experience's image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded-full"
+        />
+      </motion.div>
       <div className="overflow-x-hidden overflow-y-scroll px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
         <p className="mt-1 text-2xl font-bold">{experience?.company}</p>
         <div className="my-2 flex space-x-2">
           {experience?.technologies.map((technology) => (
-            <img
+            <div
               key={technology._id}
-              className="h-5 w-5 rounded-full object-cover object-center md:h-8 md:w-8 lg:h-10 lg:w-10"
-              src={urlFor(technology?.image).url()}
-              alt=""
-            />
+              className="relative h-5 w-5 md:h-8 md:w-8 lg:h-10 lg:w-10"
+            >
+              <Image
+                src={urlFor(technology?.image).url()}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                className="rounded-full"
+                alt=""
+              />
+            </div>
           ))}
         </div>
         <p className="py-5 uppercase text-gray-300">

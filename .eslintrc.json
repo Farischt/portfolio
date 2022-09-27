@@ -7,9 +7,7 @@
     "prettier"
   ],
   "rules": {
-    "@next/next/no-img-element": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-empty-interface": "off"
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

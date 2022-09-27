@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
@@ -22,11 +23,16 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
       <BackgroundCircles />
-      <img
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt="Faris' avatar"
-        className="relative mx-auto h-32 w-32 rounded-full object-cover"
-      />
+      <div className="relative mx-auto h-32 w-32 ">
+        <Image
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt="Faris' avatar"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded-full"
+        />
+      </div>
       <div className="z-20">
         <h2 className="pb-2 text-xs uppercase tracking-[10px] text-gray-500 md:text-sm md:tracking-[15px]">
           {pageInfo?.role}
