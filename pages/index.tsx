@@ -1,5 +1,4 @@
 import type { GetStaticProps } from "next"
-import Head from "next/head"
 import Link from "next/link"
 import { ArrowUpIcon } from "@heroicons/react/24/solid"
 
@@ -8,15 +7,16 @@ import Contact from "../components/Contact"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Projects from "../components/Projects"
+import Services from "../components/Services"
 import Skills from "../components/Skills"
 import WorkExperience from "../components/WorkExperience"
+
 import { Experience, PageInfo, Project, Skill, Social } from "../types"
 import { fetchPageInfo } from "../utils/fetchPageInfo"
 import { fetchExperiences } from "../utils/fetchExperiences"
 import { fetchProjects } from "../utils/fetchProjects"
 import { fetchSkills } from "../utils/fetchSkills"
 import { fetchSocials } from "../utils/fetchSocials"
-import Services from "../components/Services"
 
 type Props = {
   pageInfo: PageInfo
@@ -29,15 +29,6 @@ type Props = {
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-      <Head>
-        <title>Faris Chtatou</title>
-        <meta
-          name="description"
-          content="Hi ! I'm Faris Chtatou and I'll help you build your dream ! I'm a Junior Fullstack Developer based in Paris, France, currently studying a Master in Software Engineering at Efrei Paris! At the moment of reading, I'm a Fullstack Web Developer intern at DialOnce."
-        />
-        <link rel="icon" href="/avatar.jpeg" />
-      </Head>
-
       <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
