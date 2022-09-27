@@ -1,8 +1,8 @@
 import React from "react"
 import { motion } from "framer-motion"
+
 import { Project } from "../types"
 import { urlFor } from "../sanity"
-import { SocialIcon } from "react-social-icons"
 
 type Props = {
   projects: Project[]
