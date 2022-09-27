@@ -16,6 +16,7 @@ import { fetchExperiences } from "../utils/fetchExperiences"
 import { fetchProjects } from "../utils/fetchProjects"
 import { fetchSkills } from "../utils/fetchSkills"
 import { fetchSocials } from "../utils/fetchSocials"
+import Services from "../components/Services"
 
 type Props = {
   pageInfo: PageInfo
@@ -43,6 +44,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </section>
       <section id="about" className="snap-center">
         <About pageInfo={pageInfo} />
+      </section>
+      <section id="services" className="snap-center">
+        <Services />
       </section>
       <section id="experiences" className="snap-center">
         <WorkExperience experiences={experiences} />

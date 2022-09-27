@@ -35,7 +35,7 @@ const Projects = ({ projects }: Props) => {
             >
               <motion.img
                 initial={{
-                  y: -300,
+                  y: -100,
                   opacity: 0,
                 }}
                 whileInView={{ opacity: 1, y: 0 }}

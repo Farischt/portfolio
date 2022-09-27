@@ -27,12 +27,12 @@ const Contact = ({ pageInfo }: Props) => {
       </h3>
 
       <div className="flex flex-col space-y-6">
-        <h4 className="text-center text-base font-semibold sm:text-3xl md:text-4xl">
+        <h4 className="text-center text-base font-semibold sm:text-2xl md:text-3xl">
           I have got just what you need.
           <span className="underline decoration-[#F7AB0A]/50"> Lets Talk!</span>
         </h4>
 
-        <div className="space-y-10 text-sm">
+        <div className="space-y-5 text-sm">
           <div className="flex items-center justify-center space-x-5">
             <PhoneIcon className="h-7 w-7 animate-pulse text-[#F7AB0A]" />
             <p>{pageInfo?.phoneNumber}</p>
@@ -79,7 +79,7 @@ const Contact = ({ pageInfo }: Props) => {
           />
           <button
             type="submit"
-            className="rounded-md bg-[#F7AB0A] py-5 px-10 text-lg font-bold text-black"
+            className="rounded-md bg-[#F7AB0A] py-4 px-10 text-lg font-bold text-black"
           >
             Submit
           </button>
