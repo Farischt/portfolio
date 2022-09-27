@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.farischt.me/
-
-# Sitemaps
-Sitemap: https://www.farischt.me/sitemap.xml
