@@ -9,7 +9,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex h-[600px] w-[300px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden overflow-y-scroll rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900]">
+    <article className="flex h-[600px] w-[300px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900]">
       <motion.img
         initial={{
           y: -100,
@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience }: Props) => {
         alt="Experience's image"
         className="h-32 w-32 rounded-full object-cover object-center xl:h-[200px] xl:w-[200px]"
       />
-      <div className="px-0 md:px-10">
+      <div className="overflow-y-scroll px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
         <p className="mt-1 text-2xl font-bold">{experience?.company}</p>
         <div className="my-2 flex space-x-2">
