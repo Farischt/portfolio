@@ -8,7 +8,7 @@ export const fetchExperiences = async () => {
   // const data = await res.json()
   // const experiences: Experience[] = data.experiences
 
-  const query = groq`*[_type == "experience"] {
+  const query = groq`*[_type == "experience"] | order(dateStarted desc) {
   ...,
   technologies[]->
 }`
