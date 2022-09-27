@@ -27,14 +27,14 @@ const ExperienceCard = ({ experience }: Props) => {
         alt="Experience's image"
         className="h-32 w-32 rounded-full object-cover object-center xl:h-[200px] xl:w-[200px]"
       />
-      <div className="overflow-y-scroll px-0 md:px-10">
+      <div className="overflow-x-hidden overflow-y-scroll px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
         <p className="mt-1 text-2xl font-bold">{experience?.company}</p>
         <div className="my-2 flex space-x-2">
           {experience?.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-10 w-10 rounded-full object-cover object-center"
+              className="h-5 w-5 rounded-full object-cover object-center md:h-8 md:w-8 lg:h-10 lg:w-10"
               src={urlFor(technology?.image).url()}
               alt=""
             />
