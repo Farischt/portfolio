@@ -28,7 +28,7 @@ const Hero = ({ pageInfo }: Props) => {
         className="relative mx-auto h-32 w-32 rounded-full object-cover"
       />
       <div className="z-20">
-        <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500 ">
+        <h2 className="pb-2 text-xs uppercase tracking-[10px] text-gray-500 md:text-sm md:tracking-[15px]">
           {pageInfo?.role}
         </h2>
         <h1 className="px-10 text-3xl font-semibold md:text-5xl lg:text-6xl">
