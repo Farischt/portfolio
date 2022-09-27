@@ -7,8 +7,9 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "yarn tsc --noEmit && next lint && yarn eslint --max-warnings 0 . && yarn prettier --write .",
+    "lint": "next lint",
     "prettier": "prettier --write .",
+    "check": "yarn prettier --check . && next lint && yarn tsc --pretty --noEmit && yarn eslint . --max-warnings 0",
     "prepare": "husky install"
   },
   "dependencies": {
