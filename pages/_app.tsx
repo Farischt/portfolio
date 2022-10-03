@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content={seo.description} />
         <meta property="og:description" content={seo.description} />
         <meta name="twitter:description" content={seo.description} />
-        <link rel="icon" href="/avatar.jpeg" />
       </Head>
       <Component {...pageProps} />
     </>
