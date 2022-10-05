@@ -22,7 +22,7 @@ const Contact = ({ pageInfo }: Props) => {
 
   return (
     <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left">
-      <h3 className="absolute top-20 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="absolute top-20 text-lg uppercase tracking-[20px] text-gray-500 md:text-xl lg:text-2xl">
         Contact
       </h3>
 

@@ -18,7 +18,7 @@ const About = ({ pageInfo }: Props) => {
       transition={{ duration: 1.5 }}
       className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
-      <h3 className="absolute top-20 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="absolute top-20 text-lg uppercase tracking-[20px] text-gray-500 md:text-xl lg:text-2xl">
         About
       </h3>
       <motion.div
@@ -36,7 +36,7 @@ const About = ({ pageInfo }: Props) => {
         transition={{
           duration: 1.2,
         }}
-        className="relative -mb-20 h-32 w-32 flex-shrink-0 md:mb-0 md:h-96 md:w-64 xl:h-[600px] xl:w-[500px]"
+        className="relative -mb-20 h-48 w-48 flex-shrink-0 md:mb-0 md:h-96 md:w-64 xl:h-[600px] xl:w-[500px]"
       >
         <Image
           src={urlFor(pageInfo?.profilePic).url()}
@@ -54,7 +54,7 @@ const About = ({ pageInfo }: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-justify text-sm md:text-base">
+        <p className="text-justify text-base md:text-lg">
           {pageInfo?.backgroundInformation}
         </p>
       </div>

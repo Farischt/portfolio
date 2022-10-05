@@ -10,7 +10,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex h-[600px] w-[300px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900]">
+    <article className="flex h-[500px] w-[300px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:h-[600px] md:w-[600px] lg:h-[600px]  xl:w-[650px]">
       <motion.div
         initial={{
           y: -100,
@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: Props) => {
         transition={{
           duration: 1.2,
         }}
-        className="relative h-32 w-32 flex-shrink-0 rounded-full xl:h-[200px] xl:w-[200px]"
+        className="relative h-24 w-24 flex-shrink-0 rounded-full md:h-32 md:w-32 xl:h-[200px] xl:w-[200px]"
       >
         <Image
           src={urlFor(experience?.companyImage).url()}
@@ -36,8 +36,12 @@ const ExperienceCard = ({ experience }: Props) => {
         />
       </motion.div>
       <div className="overflow-x-hidden overflow-y-scroll px-0 md:px-10">
-        <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
-        <p className="mt-1 text-2xl font-bold">{experience?.company}</p>
+        <h4 className="text-lg font-light md:text-2xl lg:text-4xl">
+          {experience?.jobTitle}
+        </h4>
+        <p className="mt-1 text-base font-bold md:text-xl lg:text-2xl">
+          {experience?.company}
+        </p>
         <div className="my-2 flex space-x-2">
           {experience?.technologies.map((technology) => (
             <div
@@ -55,13 +59,13 @@ const ExperienceCard = ({ experience }: Props) => {
             </div>
           ))}
         </div>
-        <p className="py-5 uppercase text-gray-300">
+        <p className="py-5 text-xs uppercase text-gray-300 md:text-base">
           {new Date(experience?.dateStarted).toDateString()} -{" "}
           {experience?.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience?.dateEnded).toDateString()}
         </p>
-        <ul className="ml-5 list-disc space-y-4 text-lg">
+        <ul className="ml-5 list-disc space-y-4 text-justify text-xs md:text-base lg:text-lg">
           {experience?.points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

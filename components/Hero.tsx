@@ -23,7 +23,7 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
       <BackgroundCircles />
-      <div className="relative mx-auto h-32 w-32 ">
+      <div className="relative mx-auto h-32 w-32">
         <Image
           src={urlFor(pageInfo?.heroImage).url()}
           alt="Faris' avatar"
@@ -41,7 +41,7 @@ const Hero = ({ pageInfo }: Props) => {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-5">
+        <div className="space-y-2 space-x-3 pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

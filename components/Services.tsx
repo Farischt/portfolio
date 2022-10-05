@@ -12,10 +12,10 @@ const Services = () => {
       transition={{ duration: 1.5 }}
       className="relative z-0 mx-auto flex h-screen max-w-full flex-col items-center justify-evenly overflow-hidden text-left md:flex-row"
     >
-      <h3 className="absolute top-20 text-2xl uppercase tracking-[15px] text-gray-500">
+      <h3 className="absolute top-20 text-lg uppercase tracking-[15px] text-gray-500 md:text-xl lg:text-2xl">
         My Services
       </h3>
-      <h3 className="absolute top-32 hidden text-sm uppercase tracking-[3px] text-[#F7AB0A]/40 md:inline">
+      <h3 className="absolute top-32 text-sm uppercase tracking-[3px] text-[#F7AB0A]/40 md:text-base lg:text-lg">
         What do I do ?
       </h3>
 
