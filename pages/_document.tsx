@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/avatar.jpeg" />
           {process.env.NODE_ENV === "production" && (
             <>
               <script

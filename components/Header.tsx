@@ -62,9 +62,6 @@ const Header = ({ socials }: Props) => {
             fgColor="gray"
             bgColor="transparent"
           />
-          <p className="hidden text-sm uppercase text-gray-400 md:inline-flex">
-            Get in touch
-          </p>
         </motion.div>
       </Link>
     </header>

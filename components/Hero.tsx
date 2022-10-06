@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import React from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import { urlFor } from "../sanity"
@@ -42,21 +41,24 @@ const Hero = ({ pageInfo }: Props) => {
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         <div className="space-y-2 space-x-3 pt-5">
-          <Link href="#about">
+          <a href="#about">
             <button className="heroButton">About</button>
-          </Link>
-          <Link href="#services">
+          </a>
+          <a href="#services">
             <button className="heroButton">Services</button>
-          </Link>
-          <Link href="#experiences">
+          </a>
+          <a href="#experiences">
             <button className="heroButton">Experience</button>
-          </Link>
-          <Link href="#skills">
+          </a>
+          <a href="#skills">
             <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
+          </a>
+          <a href="#projects">
             <button className="heroButton">Projects</button>
-          </Link>
+          </a>
+          <a href="#contact">
+            <button className="heroButton">Get in touch</button>
+          </a>
         </div>
       </div>
     </div>

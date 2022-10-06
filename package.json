@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "check": "yarn prettier --check . && next lint && yarn tsc --pretty --noEmit && yarn eslint . --max-warnings 0",
+    "@check": "yarn prettier --check . && next lint && yarn tsc --pretty --noEmit && yarn eslint . --max-warnings 0",
     "prepare": "husky install"
   },
   "dependencies": {
