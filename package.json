@@ -15,6 +15,7 @@
     "@heroicons/react": "^2.0.11",
     "@portabletext/react": "^1.0.6",
     "@sanity/image-url": "^1.0.1",
+    "@vercel/analytics": "^0.1.2",
     "axios": "^0.27.2",
     "framer-motion": "^7.3.6",
     "next": "12.3.1",
