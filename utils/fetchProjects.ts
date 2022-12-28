@@ -4,7 +4,7 @@ import { sanityClient } from "../sanity"
 import { Project } from "../types"
 
 export const fetchProjects = async () => {
-  const query = groq`*[_type == "project"] {
+  const query = groq`*[_type == "project"]  | order(_createdAt desc) {
   ...,
   technologies[]->
 }`
